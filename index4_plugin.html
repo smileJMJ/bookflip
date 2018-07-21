@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="bookflip.css"/>
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/greensock/TweenMax.min.js"></script>
+<script src="bookflip.js"></script>
+<style type="text/css">
+a{text-decoration:none; border:none;}
+img{border:none; vertical-align:middle;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="book_wrap" id="main_visual">
+        <div id="book_flip" class="book_flip">
+            <div class="book_item"><img src="images/banner1.jpg" alt="image01"/></div>
+			<div class="book_item"><img src="images/banner2.jpg" alt="image02"/></div>
+			<div class="book_item"><img src="images/banner3.jpg" alt="image03"/></div>
+        </div>
+    </div>		<!--E: main_visual-->
+
+	<div class="book_wrap" id="high1_banner" style="margin-top:100px;">
+        <div id="book_flip" class="book_flip">
+            <div class="book_item"><a href="http://www.naver.com" target="_blank"><img src="images/high1_01.jpg" alt="image01"/></a></div>
+			<div class="book_item"><a href="http://www.daum.net" target="_blank"><img src="images/high1_02.jpg" alt="image02"/></a></div>
+        </div>
+    </div>		<!--E: main_visual-->
+</div>		<!--E: wrap-->
+<script>
+$(function(){
+	$("#main_visual").bookFlip({
+		bookWidth:251,
+		bookHeight:173,
+		autoPlay: true,					
+		duration: 0.5,					
+		gapTime: 2000		
+	});
+	$("#high1_banner").bookFlip({
+		bookWidth:230,
+		bookHeight:226,
+		autoPlay: false,					
+		duration: 0.8,					
+		gapTime: 2000	
+	});
+});
+</script>
+</body>
+</html>
